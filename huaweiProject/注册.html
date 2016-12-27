@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html{
+				background-color: #F1F1F1;
+			}
+			body, button, input, select, textarea {
+			    font: 12px/1.5 Arial, Helvetica, sans-serif;	    
+			}
+			.head-background {
+			    background-color: rgb(51, 51, 51);
+			    height: 67px;
+			}
+			.head_center {
+			    width: 998px;
+			    height: 67px;
+			    margin: 0px auto;
+			    border: 0px;
+			    position: relative;
+			}
+			.head_center .main-logo {
+				position: static;
+			    left: 2px;
+			    float: left;
+			}
+			.head_center .main-logo img {
+			    margin-top: 6px;
+			    margin-left: 4px;
+			}
+			.website-name {
+			    color: white;
+			    font-size: 20px;
+			    height: 67px;
+			    line-height: 50px;
+			    font-family: arial;
+			    padding-top: 8px;
+			}
+			h1, h2, h3, h4, h5, h6, b {
+			    font-size: 100%;
+			    font-weight: normal;
+			}
+			.relative {
+			    position: relative;
+			}
+			.wp1 {
+			    width: 100%;
+			    margin: 0px auto;
+			}
+			.reg-content {
+			    width: 988px;
+			    margin: 0px auto;
+			}
+			.reg-tab {
+			    margin-top: 29px;
+			    margin-left: 0px;
+			}
+			.tab-phone.sel {
+			    background-position: 0px 0px;
+			}
+			.reg-tab a {
+			    display: inline-block;
+			    width: 99px;
+			    height: 26px;
+			    line-height: 16px;
+			    color: rgb(255, 255, 255);
+			    font-size: 12px;
+			    padding-left: 40px;
+			    padding-top: 7px;
+			}
+			.tab-phone, .tab-email, .agree .tick {
+			    background-image: url(img/main_reg.png);
+			    background-repeat: no-repeat;
+			}
+			a {
+			    text-decoration: none;
+			    color: #b7b7b7;
+			    cursor: pointer;
+			}
+			.reg-tab .tab-email {
+			    padding-left: 50px;
+			}
+			.tab-email {
+			    background-position: -150px 0px;
+			}
+			.login {
+			    margin-top: -25px;
+			}
+			.r {
+			    float: right;
+			}
+			.login-a {
+			    color: rgb(215, 5, 6);
+			    text-decoration: underline;
+			}
+			.reg-detail {
+			    background-color: rgb(255, 255, 255);
+			    padding: 52px 97px 38px;
+			}
+			.reg-title {
+			    font-size: 28px;
+			    color: rgb(0, 0, 0);
+			    font-family: "Microsoft Yahei";
+			}
+			.node-intro {
+			    color: rgb(153, 153, 153);
+			    line-height: 16px;
+			    margin-top: 19px;
+			}
+			.box-shadow-in {
+			    padding-bottom: 30px;
+			    text-align: center;
+			    border-bottom: 1px solid rgb(224, 224, 224);
+			}
+			.node {
+			    margin-top: 42px;
+			}
+			.node-title {
+			    font-size: 14px;
+			    font-weight: bold;
+			}
+			.node-intro {
+			    color: rgb(153, 153, 153);
+			    line-height: 16px;
+			    margin-top: 19px;
+			}
+			.node-des {
+			    margin: 30px 53px 0px 0px;
+			}
+			.node-input {
+			    width: 334px;
+			    margin-right: 270px;
+			}
+			.short {
+			    width: 163px;
+			}
+			.node-input .dinput {
+			    margin-top: 0px;
+			    color: rgb(51, 51, 51);
+			    border-radius: 0px;
+			}
+			.dinput {
+			    border: 1px solid #c5c5c5;
+			    border-radius: 10px;
+			    background-color: #fff;
+			    font-size: 12px;
+			    color: #ccc;
+			    padding: 0 15px;
+			    margin-top: 25px;
+			}
+			.node-input .dinput input {
+			    line-height: 32px;
+			    height: 32px;
+			    width: 100%;
+			    border: medium none;
+			}
+			label.lb_opacity_Class{
+				display:block;
+			}
+			.dinput input:focus{
+				border:0 none;
+				box-shadow: none;
+				outline: medium none;
+			}
+			.node-input .ddrop {
+			    color: rgb(51, 51, 51);
+			    margin-top: 0px;
+			    font-size: 12px;
+			    border-radius: 0px;
+			    padding: 10px 14px;
+			}
+			.ddrop {
+			    position: relative;
+			    height: 14px;
+			}
+			.ddrop, .dpmenu {
+			    border: 1px solid #c5c5c5;
+			    border-radius: 10px;
+			    background-color: #fff;
+			    color: #ccc;
+			    padding: 14px;
+			    margin-top: 25px;
+			}
+			.dptick {
+			    background-position: 0 -150px;
+			    padding: 8px;
+			    margin-top: 3px;
+			}
+			.user, .navsign, .tick, .uncheck, .switch, .dptick, .uptick, .uptick_left, .ron, .roff, .btn-yes, .btn-no, .poptips-yes, .poptips-no, .poptips-warn, .eye, .login-checkbox, .add {
+			    background-image: url(img/main.png);
+			    background-repeat: no-repeat;
+			}
+			.node-input .dpmenu {
+			    color: rgb(153, 153, 153);
+			    font-size: 12px;
+			}
+			.dpmenu {
+			    padding: 0;
+			    position: absolute;
+			    top: 32px;
+			    left: -1px;
+			    right: -1px;
+			    z-index: 3;
+			    outline: none;
+			    max-height: 200px;
+			    margin-top: 5px;
+			    overflow: auto;
+			}
+			.dpmenu li {
+			    padding: 10px;
+			    cursor: pointer;
+			    color: #333;
+			}
+			.node-input .dbtn2 {
+			    width: 163px;
+			    height: 34px;
+			    line-height: 34px;
+			    font-size: 12px;
+			    border-radius: 0px;
+			}
+			.dbtn2 {
+			    width: 228px;
+			    height: 42px;
+			    line-height: 42px;
+			    cursor: pointer;
+			    border: 1px solid #dcdcdc;
+			    border-radius: 10px;
+			    background-color: #f2f2f2;
+			    text-align: center;
+			    font-size: 16px;
+			    color: #333;
+			}
+			.vam {
+			    vertical-align: middle;
+			}
+			.input-intro {
+			    font-size: 12px;
+			    color: rgb(153, 153, 153);
+			    text-align: left;
+			    width: 110px;
+			    padding: 10px 0px;
+			}
+			.s{
+				color: red;
+				font-style: italic;
+				display: none;
+			}
+			.pwd-letter {
+			    margin-top: 3px;
+			}
+			.pwd-letter span {
+			    width: 80px;
+			    background: #eee;
+			    margin-left: 1px;
+			    display: block;
+			    float: left;
+			    text-align: center;
+			    color: #aaa;
+			}
+			.regAgrTitle {
+			    margin-bottom: 20px;
+			    margin-top: -8px;
+			    font-size: 16px;
+			}
+			.selectCountry-right {
+			    float: right;
+			}
+			.foot-selectCountry-margin {
+			    margin-top: -20px;
+			}
+			.selectedCountry_style {
+			    float: right;
+			    margin-right: 10px;
+			    margin-top: 8px;
+			}
+			.agrLineH {
+			    line-height: 180%;
+			    color: rgb(0, 0, 0);
+			}
+			.agrIndent {
+			    text-indent: 2em;
+			}
+			.loginAndRegLink {
+			    color: rgb(0, 192, 244);
+			    text-decoration: underline;
+			}
+			.reg-btn {
+				border-radius: 0px;
+			    margin-top: 38px;
+			    text-align: center;
+			}
+			.reg-btn .btn.sel {
+			    background-color: rgb(215, 5, 6);
+			    color: rgb(255, 255, 255);
+			    border-width: 1px;
+			    border-style: solid;
+			    border-color: rgb(156, 156, 156);
+			    border-image: initial;
+			}
+			.btn-reg {
+			    width: 279px;
+			    height: 45px;
+			    margin: 0px auto;
+			}
+			.btn {
+			    margin-left: 10px;
+			    margin-right: 56px;
+			    border-radius: 0px;
+			    display: inline-block;
+			    line-height: 35px;
+			    cursor: pointer;
+			    text-align: center;
+			    border: 1px solid #e5e5e5;
+			    font-size: 14px;
+			    color: #000;
+			}
+			.error {
+			    border-color: #BC0000 !important;
+			    color: #B00;
+			    font-weight: 700;
+			    font-size: 12px;
+			}
+			.box-shadow {
+			    border-bottom: 1px solid rgb(215, 215, 215);
+			}
+			.ft {
+			    margin: 30px auto;
+			    text-align: center;
+			    font-size: 12px;
+			}
+			.ft .reg-content {
+			    margin-top: 30px;
+			    margin-bottom: 30px;
+			    text-align: center;
+			}
+			.ft p {
+			    line-height: 24px;
+			}
+			.footer {
+			    line-height: 18px;
+			    color: rgb(153, 153, 153);
+			}
+			.ft p a {
+			    color: #999;
+			}
+			.footer a {
+			    font-size: 14px;
+			    line-height: 18px;
+			    color: rgb(153, 153, 153);
+			}
+			.rule {
+			    text-decoration: underline;
+			    margin-right: 12px;
+			}
+		</style>
+		<script>
+		function test(label){
+			label.style.display="none";
+		}
+		function regist() {
+        var nameInput = document.querySelector("#username").value;
+        var pwdInput = document.querySelector("#password").value;
+        var pwdaInput = document.querySelector("#input_label_0").value;
+        var authInput = document.querySelector("#authCode").value;
+            if(nameInput == "" || pwdInput == "" || pwdaInput== ""|| authInput== "") {
+                alert("所填项不能为空！");
+                return false;
+            }
+             document.cookie = "user="+nameInput;
+			 document.cookie = "pwd="+pwdInput;
+			 location.href="登录.html";
+             return true;
+         }
+	    function testChange() {
+        var nameInput = document.querySelector("#username");
+        var name = nameInput.value;
+        var error = document.querySelector("#msg_phone");
+        var reg=/^0?1[3|4|5|7|8][0-9]\d{8}$/;
+        if(reg.test(name)==false) {
+            error.style.display= "block";
+        }else {
+            error.style.display = "none";
+        }
+    }
+        function testChangeA() {
+        var pwdInput = document.querySelector("#password");
+        var pwd = pwdInput.value;
+        var pwderror = document.querySelector("#msg_password");
+        var numflag= /[0-9]/;//至少有一个数字
+        var charflag=/[a-z]/;//至少有一个小写字母
+        var charflag1=/[A-Z]/;
+        var hasNum = numflag.test(pwd);
+        var hasLittleChar = charflag.test(pwd);
+        var hasBigChar = charflag1.test(pwd);
+		var isValidate = hasNum && hasLittleChar && hasBigChar;
+        if(isValidate==true&&pwd.length<=32&&pwd.length>=8){
+            pwderror.style.display = "none";
+            return true;
+        }else {
+            pwderror.style.display= "block";
+            return false;
+        }
+    }    
+        function testChangeB(){
+        var pwd = document.querySelector("#password").value;
+        var pwdaInput=document.querySelector("#input_label_0")
+        var pwda = pwdaInput.value;
+        var pwdaerror = document.querySelector("#msg_checkPassword");
+        if(pwda!=pwd){
+        	pwdaerror.style.display= "block";
+        }else {
+            pwdaerror.style.display = "none";
+        }
+    }
+		</script>
+	</head>
+
+	<body>
+		<div class="head-background">
+			<div class="head_center">
+
+				<div class="main-logo">
+					<img src="img/logo2.png">
+				</div>
+				<div class="website-name" style="color:#fff;">
+					<b style="font-size: 23px;margin-top: -4px;float: left;">|</b>
+					<b style="font-size: 23px;margin-top: -1px;float: left; margin-left:5px;">华为商城</b>
+				</div>
+
+			</div>
+		</div>
+		<div class="wp1 relative">
+			<div class="reg-content" id="registerForm">
+				<div class="reg-tab">
+
+					<a href="https://hwid1.vmall.com/CAS/portal/userRegister/regbyphone.html?reqClientType=26&amp;loginChannel=26000000&amp;countryCode=cn&amp;loginUrl=https%3A%2F%2Fhwid1.vmall.com%2FCAS%2Fportal%2Flogin.html&amp;service=http%3A%2F%2Fwww.vmall.com%2Faccount%2Fcaslogin&amp;lang=zh-cn&amp;themeName=red"
+					class="tab-phone sel">手机号</a>
+					<a href="https://hwid1.vmall.com/CAS/portal/userRegister/regbyemail.html?reqClientType=26&amp;loginChannel=26000000&amp;countryCode=cn&amp;loginUrl=https%3A%2F%2Fhwid1.vmall.com%2FCAS%2Fportal%2Flogin.html&amp;service=http%3A%2F%2Fwww.vmall.com%2Faccount%2Fcaslogin&amp;lang=zh-cn&amp;themeName=red"
+					class="tab-email">电子邮箱 </a>
+
+				</div>
+				<div class="login r">
+					已有华为帐号
+					<a href="登录.html" class="login-a" title="登录">登录 </a>▶
+				</div>
+
+				<div class="reg-detail">
+					<h3 class="reg-title">
+					注册华为帐号
+				</h3>
+					<p class="node-intro">
+						华为帐号是您用于访问所有华为服务的帐号。使用华为帐号登录后，您将可以使用云服务、华为商城、花粉俱乐部、应用市场、EMUI产品、华为网盘和开发者联盟。
+					</p>
+					<div class="box-shadow-in"></div>
+
+					<div class="node">
+						<div class="node-title">华为帐号</div>
+						<div class="node-intro">输入手机号作为您的华为帐号，用于登录、重设密码、验证身份。</div>
+						<div class="node-des mkcl">
+							<div class="node-input r mkcl">
+								<div class="short r">
+									<div class="dinput">
+										<label class="lb_opacity_Class" style=" position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 8px;" for="username"onclick="test(this)" >
+											<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);">输入手机号</div>
+										</label>
+										<input type="text" id="username" name="formBean.username" maxlength="50"  style="z-index: 1;" onchange="testChange()">
+									</div>
+									<span id="msg_phone" class="s">输入手机号格式有误！</span>
+								</div>
+								<div class="short">
+									<div class="ddrop" id="input_languageCode">
+										<input type="hidden" id="countryCode" value="0086">
+										<input type="hidden" value="0086"><b class="dptick r"></b><span>+86(中国)</span>
+										<ul class="dpmenu" style="display: none;">
+											<li data-value="0086">+86(中国)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="input-intro">
+								手机号：
+							</div>
+						</div>
+						<div class="node-des mkcl">
+							<div class="node-input r">
+								<div class="short r">
+									<div>
+										<input type="button" class="dbtn2 r" id="getValiCode"  value="获取验证码">
+										<span id="msg_getPhoneRandomCode" style="position:relative;top:34px;"></span>
+									</div>
+								</div>
+								<div class="short">
+									<div class="dinput">
+										<label class="lb_opacity_Class" style=" position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 8px;" for="authCode" onclick="test(this)">
+											<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" class="verify vam ime-disabled">短信验证码</div>
+										</label>
+										<input type="text" autocomplete="off" class="verify vam ime-disabled" id="authCode" style="vertical-align: middle; z-index: 1;" name="formBean.authCode" maxlength="8" >
+									</div>
+									<span id="msg_phoneRandomCode"></span>
+								</div>
+							</div>
+							<div class="input-intro">
+								验证码：
+							</div>
+						</div>
+					</div>
+					<div class="box-shadow-in"></div>
+
+					<div class="node">
+						<div class="node-title">设置登录密码</div>
+						<div class="node-intro">密码由8-32位字符组成，需至少包含一个大写字母、一个小写字母和一个数字，建议不与其他密码相同</div>
+						<div class="node-des mkcl">
+							<div class="node-input r">
+								<div class="dinput">
+									<label class="lb_opacity_Class" style=" position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 8px;" for="password" onclick="test(this)" >
+										<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" tabindex="-1" class="text vam">8~32个字符</div>
+									</label>
+									<input type="password" autocomplete="off" class="text vam" id="password" name="formBean.password" maxlength="32"  style="z-index: 1;" onchange="testChangeA()">
+								</div>
+								<div class="pwd-letter">
+									<span>弱 </span><span> 中 </span><span> 强 </span>
+								</div>
+								<div>
+									<br><span id="msg_password" class="s">密码由8-32位字符组成，至少包含一个大写字母、一个小写字母和一个数字</span>
+								</div>
+							</div>
+							<div class="input-intro">
+								密码：
+							</div>
+						</div>
+						<div class="node-des mkcl">
+							<div class="node-input r">
+								<div class="dinput">
+									<label class="lb_opacity_Class" style="position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 8px;" for="input_label_0" onclick="test(this)" >
+										<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" class="text vam">8~32个字符</div>
+									</label>
+									<input type="password" autocomplete="off" class="text vam" name="checkPassword" maxlength="32"  id="input_label_0" style="z-index: 1;"onchange="testChangeB()">
+								</div>
+								<span id="msg_checkPassword" class="s">密码与确认密码不一致</span>
+							</div>
+							<div class="input-intro">
+								确认密码：
+							</div>
+						</div>
+					</div>
+					<div class="box-shadow-in"></div>
+
+					<!-- 选择国家开始 -->
+					<div class="node" id="chooseCountry">
+
+						<div class="regAgrTitle node-title">华为帐号服务条款</div>
+
+						<div class="node-title">国家/地区
+						</div>
+						<div class="foot-selectCountry-margin selectCountry-right">
+							<div class="selectCountryImg_style">
+
+							</div>
+							<div class="selectedCountry_style">
+								<div>
+									<div id="selectedCountry">中国</div>
+								</div>
+							</div>
+						</div>
+						<div id="regXCountry" class="node-intro">您正在注册中国的华为帐号</div>
+					</div>
+					<div class="box-shadow-in" id="chooseCountryShadow"></div>
+					<!-- 选择国家结束 -->
+
+					<div id="agreement">
+
+						<div class="node">
+
+							<div class="node-intro">
+								<div class="agrLineH">华为将为您创建唯一的华为帐号，来标识您和提供更优服务，且需搜集和处理以下信息： </div>
+								<div class="agrLineH agrIndent">您所有登录的设备信息，包括：IMEI、IMSI、SN、国家/地区、语言、型号和版本号；</div>
+								<div class="agrLineH agrIndent">您向我们提交的个人信息，包括：手机号、邮件地址、密码、头像、昵称、生日、姓名和性别；</div>
+								<div class="agrLineH">上述数据将会传输并保存至华为全球的服务器。您可通过销户删除所有个人数据。</div>
+								<br>
+								<div class="agrLineH">华为帐号用户可以通过手机号或邮件地址搜索到您，并可查看您的公开信息，包括：头像、昵称、城市等。您也可以在华为帐号的设置中关闭。</div>
+								<br>
+								<div class="agrLineH">点击“注册”，即表示您同意上述内容及<a href="https://hwid1.vmall.com/CAS/portal/agreements/EULA/zh-cn_EULA.html?version=china" target="_blank" class="loginAndRegLink">华为帐号用户协议</a>并确认您已阅读<a href="https://hwid1.vmall.com/CAS/portal/agreements/userPrivacyPolicy/zh-cn_userPrivacyPolicy.html"
+									target="_blank" class="loginAndRegLink">华为隐私政策</a>。</div>
+							</div>
+						</div>
+						<div class="box-shadow-in"></div>
+
+					</div>
+
+					<div class="reg-btn" align="center">
+						<input type="button" class="btn btn-reg sel" id="btnSubmit" value="立即注册" onclick="return regist();">
+						<div id="register_msg" class="vam error" style="position:relative;left:30%;"></div>
+					</div>
+				</div>
+				<div class="box-shadow">
+				</div>
+			</div>
+		</div>
+		<div class="wp1 ft">
+			<div class="reg-content">
+				<p class="footer">
+
+					<a id="foot_privacy" href="https://hwid1.vmall.com/CAS/portal/agreements/userPrivacyPolicy/zh-cn_userPrivacyPolicy.html?version=europe" class="rule" target="_blank">华为隐私政策</a>
+					<a id="foot_EULA" href="https://hwid1.vmall.com/CAS/portal/agreements/EULA/zh-cn_EULA.html?version=china" class="rule" target="_blank">华为帐号用户协议</a>
+
+					<a href="#" target="_blank"><em style="font-style: normal">|</em> </a><a style="text-decoration: underline;" target="blank" href="https://hwid1.vmall.com/CAS/portal/faq/faq.html">常见问题</a>
+				</p>
+
+				<p class="footer">Copyright&nbsp;@&nbsp;2011-2016&nbsp;&nbsp;华为软件技术有限公司&nbsp;&nbsp;版权所有&nbsp;&nbsp;保留一切权利&nbsp;&nbsp;苏B2-20070200号&nbsp;|&nbsp;苏ICP备09062682号-9</p>
+			</div>
+		</div>
+	</body>
+
+</html>

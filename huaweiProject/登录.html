@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+		}
+		body{
+   			 font: 12px/1.5 Arial, Helvetica, sans-serif;
+             background-color: rgb(248, 248, 248);
+		}
+		.g {
+		    width: 1002px;
+		    zoom: 1;
+		    margin: 0px auto;
+		}
+		.customer-header {
+		    height: 100px;
+		}
+		.head_center {
+		    width: 998px;
+		    height: 67px;
+		    position: relative;
+		    margin: 0px auto;
+		    border-width: 0px;
+		    border-style: initial;
+		    border-color: initial;
+		    border-image: initial;
+		}
+		.head_center .main-logo {
+		    position: static;
+		}
+		.head_center .main-logo {
+		    left: 2px;
+		    float: left;
+		}
+		.head_center .main-logo img {
+		    margin-top: 6px; 
+		    margin-left: 4px;
+		}
+		.website-name span {
+		    margin-top: 18px;
+		    height: 15px;
+		    width: 2px;
+		    margin-right: 6px;
+		}
+		.logo_line {
+		    background: url(img/line.png) 2px 1px no-repeat;
+		    overflow: hidden;
+		    margin: 0px auto;
+		    background-repeat: no-repeat;
+		}
+		 h1, h2, h3, h4, h5, h6, b {
+		    font-size: 100%;
+		    font-weight: normal;
+		}
+		.login_bg_pic {
+		    width: 640px;
+		    height: 588px;
+		    float: left;
+		    background-repeat: no-repeat;
+		}
+		.login-right {
+		    width: 358px;
+		    float: right;
+		}
+		.login-area .h {
+		    padding: 96px 0px 18px 2px;
+		}
+		.login-area-marginTop {
+		    margin-top: -45px;
+		}
+		.login-area .h span {
+		    font-size: 30px;
+		    color: rgb(234, 94, 0);
+		    font-weight: bold;
+		}
+		.loginTitle {
+		    font-family: "Microsoft YaHei";
+		}
+        .login-form-marginTop {
+		    margin-top: -20px;
+		}
+		table {
+		    border-collapse: collapse;
+		    border-spacing: 0px;
+		}
+		.form-edit-area th, .form-edit-area td {
+		    padding: 7px 0px;
+		}
+		td {
+		    word-wrap: break-word;
+		    word-break: normal;
+		}
+		.form-edit-area .text {
+		    width: 250px;
+		}
+		.form-edit-area .text, .form-edit-area .verify {
+		    color: rgb(139, 139, 139);
+		    font-size: 14px;
+		    height: 16px;
+		    line-height: 16px;
+		    border-width: 1px;
+		    border-style: solid;
+		    border-color: rgb(188, 188, 188);
+		    border-image: initial;
+		    padding: 10px 14px;
+		    border-radius: 0px;
+		}
+		.vam {
+		    vertical-align: middle;
+		}
+	
+		.form-edit-area input.vam {
+		}
+		td.verify-td {
+		    margin-top: -5px;
+		    padding: 0px;
+		}
+		.form-edit-area .verify {
+		    width: 115px;
+		}
+		.pointer {
+		    cursor: pointer;
+		}
+		.form-edit-area td.mt-checkbox {
+		    padding: 20px 0px 15px;
+		}
+		.radio, .checkbox {
+		    margin-right: 5px;
+		    margin-top: 3px;
+		}
+		label.vam {
+		    vertical-align: middle;
+		    font-family: tahoma;
+		}
+		.form-edit-area a.vam {
+		    font-family: Tahoma;
+		}
+		.form-edit-area .forgot {
+		    color: rgb(51, 51, 51);
+		    display: inline-block;
+		    margin-left: 110px;
+		}
+		a{
+			text-decoration: none;
+			cursor: pointer;
+			color:rgb(183,183,183);
+		}
+		#remeberTip {
+		    margin-top: 5px;
+		    margin-left: -13px;
+		}
+		.error {
+		    color: rgb(187, 0, 0);
+		    font-weight: 700;
+		    font-size: 12px;
+		    border-color: rgb(188, 0, 0) !important;
+		}
+		.button-login {
+		    font-family: "Microsoft YaHei";
+		}
+		.button-login {
+		    width: 100px;
+		    line-height: 44px;
+		    height: 44px;
+		    font-weight: bold;
+		    font-size: 18px;
+		    background-image: none;
+		    background-color: rgb(180, 7, 7);
+		    text-align: center;
+		    color: rgb(255, 255, 255);
+		    cursor: pointer;
+		    border-radius: 0px;
+		    border-width: 0px 0px 2px;
+		    border-style: solid;
+		    border-color: rgb(180, 7, 7);
+		}
+		.load {
+		    z-index: 10;
+		    height: 0px;
+		    margin-left: 10px;
+		}
+		.login-area .login-tips {
+		    margin-top: 10px;
+		    padding-top: 10px;
+		    width: 299px;
+		}
+		.inptips4 {
+		    color: rgb(153, 153, 153);
+		    line-height: 16px;
+		}
+		.third_login {
+		    float: left;
+		    margin-top: 6px;
+		    color: rgb(153, 153, 153);
+		}
+		.login-area .login-tips a {
+		    color: rgb(255, 153, 55);
+		    font-size: 14px;
+		    font-weight: 700;
+		}
+		.qqLogin_bigIco a {
+		    width: 23px;
+		    height: 30px;
+		    display: block;
+		    float: left;
+		    background: url(img/qq23.png) no-repeat;
+		    padding: 0px 5px 0px 2px;
+		}
+		.alipayLogin_bigIco a {
+		    width: 23px;
+		    height: 30px;
+		    display: block;
+		    float: left;
+		    background: url(img/alipay23.png) no-repeat;
+		    padding: 0px 5px 0px 2px;
+		}
+		.weixinLogin_bigIco a {
+		    width: 23px;
+		    height: 30px;
+		    display: block;
+		    float: left;
+		    background: url(img/weixin23.png) no-repeat;
+		    padding: 0px 5px 0px 2px;
+		}
+		.login-foot {
+		    border-top: 1px solid rgb(215, 215, 215);
+		    margin: 50px 150px;
+		}
+		.ft {
+		    text-align: center;
+		    font-size: 12px;
+		    color: rgb(153, 153, 153);
+		    margin: 30px auto;
+		}
+		.wp {
+		    width: 1000px;
+		    margin: 0px auto;
+		}
+		.ft p {
+		    line-height: 30px;
+		    display: block;
+		}
+		.ft p a {
+		    font-size: 14px;
+		    color: rgb(153, 153, 153);
+		    
+		}
+		.rule {
+		    text-decoration: underline;
+		    margin-right: 12px;
+		}
+		.foot_em {
+		    font-size: 16px;
+		}
+		em {
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		.login-foot .ifaq {
+		    background-position: -300px 3px;
+		    padding-left: 15px;
+		}
+		</style>
+		<script>
+		  var i = 0;//全局变量不会被销毁，放进里面作为局部变量会销毁
+	   	  function exam(){
+	   	  	var imgELem=document.querySelector("#randomCodeImg");
+	   	  	var imgList=["img/验证码1.PNG","img/验证码2.PNG","img/验证码3.PNG"];
+	   	  	i++;	
+	   	  	imgELem.src=imgList[i%imgList.length];	
+	   	  }
+	     function getCookie(cookieName)
+        {
+            var strCookie=document.cookie;
+            var arrCookie=strCookie.split("; ");
+            for(var i=0;i<arrCookie.length;i++)
+            {
+                var arr=arrCookie[i].split("=");
+                if(arr[0].trim()==cookieName)
+                    return arr[1];
+            }
+            return "";
+        }
+        function Login() {
+            var nameInput = document.querySelector("#login_userName").value;
+            var pwdInput = document.querySelector("#login_password").value;
+            if (nameInput == getCookie("user") && pwdInput == getCookie("pwd")) {
+            	location.href="首页.html";
+                 return true;
+            }
+           
+            else if(nameInput == "" || pwdInput == "") {
+                alert("用户名和密码不能为空！");
+                return false;
+            }
+            else{
+                alert("用户名或者密码错误！");
+                return false;
+            }
+         }
+		</script>
+	</head>
+
+	<body>
+
+		<body class="login">
+			<div class="g">
+
+				<!-- 头部  -->
+				<div class="customer-header">
+					<div class="head_center">
+
+						<div class="main-logo">
+							<img src="img/huaweiLogo.png">
+						</div>
+						<div class="website-name" style="color:#999;">
+							<span class="logo_line"></span>
+							<b style="font-size: 25px;margin-top:20px;float: left;">|</b>
+							<b style="font-size: 23px;margin-top:22px;float: left; margin-left:3px;">华为商城</b>
+						</div>
+
+					</div>
+				</div>
+				<!--登录 -->
+				<div style="height: 550px;">
+					<div style="background-image: url(img/bg11.jpg) ;" class="login_bg_pic">
+					</div>
+					<div class="login-area login-right">
+						<div class="h">
+							<h3 class="login-area-marginTop"><span class="loginTitle">欢迎登录华为帐号</span></h3>
+						</div>
+						<div class="b">
+							<div class="login-form-marginTop">
+								<div class="form-edit-area">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td>
+													<label class="lb_opacity_Class" style="display: none; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 1px; padding-top: 1px;" for="login_userName">
+														<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" tabindex="-1" class="text vam">手机号/邮件地址</div>
+													</label>
+													<input type="text" autocomplete="off" class="text vam" id="login_userName" style="z-index: 1;">
+													<div id="msg_username"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label class="lb_opacity_Class" style="display: none; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 1px; padding-top: 1px;" for="login_password">
+														<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" tabindex="-1" class="text vam">密码</div>
+													</label>
+													<input id="login_password" type="password" autocomplete="off" class="text vam" name="password" maxlength="32" tabindex="2" validator="validator21481103517621" style="z-index: 1;">
+													<div id="msg_password"></div>
+												</td>
+											</tr>
+											<tr>
+												<td class="verify-td">
+													<table>
+														<tbody>
+															<tr>
+																<td>
+																	<label class="lb_opacity_Class" style="display: block; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 1px; padding-top: 1px;" for="randomCode">
+																		<div style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);" tabindex="-1" class="verify vam">不区分大小写</div>
+																	</label>
+																	<input type="text" autocomplete="off" class="verify vam cas_error error" id="randomCode" name="authcode" maxlength="4" tabindex="3" validator="validator31481103517621" style="z-index: 1;">
+																	<div id="msg_randowCode" ></div>&nbsp;&nbsp;
+																</td>
+																<td>
+																	<img class="vam pointer" id="randomCodeImg" width="100" src="img/验证码1.PNG" alt="验证码："> &nbsp;&nbsp;
+																</td>
+																<td>
+																	<img class="vam pointer" src="img/chg_image.png" onclick="exam()" >
+																</td>
+																<td>
+																	<span class="vam" style="margin:0px;" id="randomCodeError"></span>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td class="mt-checkbox">
+													<input type="checkbox" class="checkbox vam" id="remember_name" name="remember_name" tabindex="4">
+													<label class="vam" for="remember_name">记住帐号</label>&nbsp;&nbsp;&nbsp;&nbsp;
+													<a class="forgot vam" href="javascript:void(0)"  title="忘记密码？"> 忘记密码？</a>
+													<div id="remeberTip"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div style="border-bottom:1px solid #d7d7d7;margin-bottom:20px"></div>
+													<div style="margin-bottom:0px;"><span class="vam error" id="login_msg" style="margin-bottom: 5px; display: none;"></span></div>
+													<input type="button" style="width:280px;" class="button-login" id="btnLogin" value="登录" tabindex="5" onclick="return Login()">
+													<div id="msg_login"></div>&nbsp;&nbsp;
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<p class="login-tips inptips4" style="margin-top:-10px">
+
+								<span class="third_login">第三方帐号登录：</span>
+
+								<span class="qqLogin_bigIco" title="QQ" onclick="thirdAccountBind(this)"><a href="javascript:void(0);" tourl="/qq/authorize"><s></s></a></span><span class="alipayLogin_bigIco" title="支付宝" onclick="thirdAccountBind(this)"><a href="javascript:void(0);" tourl="/alipay/authorize"><s></s></a></span>
+								<span
+								class="weixinLogin_bigIco" title="微信" onclick="thirdAccountBind(this)"><a href="javascript:void(0);" tourl="/weixin/authorize"><s></s></a></span>
+							</p>
+							<p class="login-tips" style="margin-top:30px">
+								您还没有华为帐号吧？ &nbsp;&nbsp;
+								<a href="注册.html"
+								title="免费注册">免费注册</a>
+							</p>
+
+							<p class="login-tips inptips4">
+								华为帐号是您用于访问所有华为服务的帐号。使用华为帐号登录后，您将可以使用云服务、华为商城、花粉俱乐部、应用市场、EMUI产品、华为网盘和开发者联盟。
+							</p>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="login-foot">
+				<!-- 底部  -->
+
+				<div class="wp ft">
+					<p>
+
+						<a href="https://hwid1.vmall.com/CAS/portal/agreements/userPrivacyPolicy/zh-cn_userPrivacyPolicy.html?version=europe" class="rule" target="_blank">华为隐私政策</a>
+						<a href="https://hwid1.vmall.com/CAS/portal/agreements/EULA/zh-cn_EULA.html?version=china" class="rule" target="_blank">华为帐号用户协议</a>
+						<em class="foot_em">|</em>
+						<a href="https://hwid1.vmall.com/CAS/portal/faq/faq.html" class="ifaq" target="_blank">常见问题</a>
+
+					</p>
+
+					<p>Copyright©2011-2016 华为技术有限公司 版权所有 保留一切权利</p>
+					<p>苏B2-20070200号 | 苏ICP备09062682号-9</p>
+
+				</div>
+			</div>
+			<div id="layer">
+				<div class="mc"></div>
+			</div>
+
+			<div id="selectCountryCodeDiv">
+
+			</div>
+			<div class="loginmask" style="display: none;">
+				<div>
+					<span>登录中...</span>
+				</div>
+			</div>
+
+		</body>
+	</body>
+
+</html>
