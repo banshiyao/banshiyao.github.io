@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>潇湘微雪</title>
+  <title>git命令大全 | 潇湘微雪</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,154 +191,55 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/12/27/git/">git命令大全</a></h3>
-                    <span>
-                        <span class="post-meta">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
       <time datetime="2016-12-27T08:03:30.706Z" itemprop="datePublished">
           2016-12-27
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        常用命令：SSH配置步骤：打开git Bashssh-keygen -t rsa -C “youremail@example.com”登陆GitHub，打开“Account settings”，“SSH Keys”页面：在Key文本框里粘贴id_rsa.pub文件的内容git remote add origin git@github.com:mongs/gittest.git
-初始化新建仓库：git init克隆仓库：git clone
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/12/27/git/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>git命令大全</h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/12/27/html5/">HTML5总结</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-12-27T05:32:02.108Z" itemprop="datePublished">
-          2016-12-27
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        HTML5结构标签；Header:  页头标签Nav: 导航Article: 页面内容一部分Footer: 页脚部分或者根元素
-HTML5识别兼容性对于IE8之前的浏览器可能不识别一些新标签，为了确保css可以用于新增元素，可以使用新创建元素方式处理这个问题。可以判断浏览器不支持的时候，执行下面两行代码。
-var header  = document.createElement(“header”);document.body.appen
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/12/27/html5/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>常用命令：<br>SSH配置步骤：<br>打开git Bash<br>ssh-keygen -t rsa -C “youremail@example.com”<br>登陆GitHub，打开“Account settings”，“SSH Keys”页面：<br>在Key文本框里粘贴id_rsa.pub文件的内容<br>git remote add origin git@github.com:mongs/gittest.git</p>
+<p>初始化新建仓库：<br>git init<br>克隆仓库：<br>git clone url<br>设置作者相关信息：<br>git config –global user.name “用户名”<br>git config –global user.email “邮箱”<br>查看所有配置：<br>git config –list<br>查看当前状态<br>git status<br>将某个文件加入缓存区git add 文件名<br>将所有改动文件加入缓存区git add .<br>提交<br>将缓存区文件加入本地工作区git commit -m “描述信息”<br>对比<br>工作区-暂存区：git diff<br>暂存区-版本库 git diff –cached(–staged)<br>工作区-版本库 git diff master<br>同步远程仓库<br>查看远程仓库的名字 git remote<br>查看远程仓库的名字及地址 git remote -v<br>git remote origin 如果有提示:fatal: remote origin already exists. git remote rm origin<br>git push origin master<br>更新远程仓库到本地同步代码<br>把远端仓库内容拉取但是并不合并 git fetch<br>查看本地与远端区别 git diff master origin/master<br>合并 git merge origin/master<br>把远端仓库内容拉取并且自动合并 git pull </p>
+<p>分之<br>查看分支 git branch<br>创建新分支但不切换 git branch 分支名<br>删除分支  git branch -d 分支名<br>强制删除（慎重） git branch -D 分支名<br>切换分支 git checkout 分支名<br>创建新分支并切换到新分支 git checkout -b 新分支名<br>合并分支 git merge</p>
+<p>帮助<br>例如查看config使用方法：git help config</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/12/23/hello-world/">JS总结</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-12-23T08:53:13.113Z" itemprop="datePublished">
-          2016-12-23
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        一： 关于基本数据类型在栈内存和堆内存中的关系
-基本数据对于栈内存和堆内存是可以复制的，可以把a变量里的数据赋值给b变量同时在栈内存里面为每个变量各保存一个对象，改变其他某个变量的值将不影响其他对变量的值。
-列子1：var num1 = 6;
-var num2 = num1;
-在此num1与num2保存着相同的值，但是他们是完全独立的，相互做任何操作不受影响。
-列子2： var obj1 = new object（）；
-var obj2
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/12/23/hello-world/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+    
+    
+    <a class="pull-right" href="/2016/12/27/html5/">
+        HTML5总结 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/12/27/git/" data-title="git命令大全" data-url="http://inerdstack.com/2016/12/27/git/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>在思软的日子里，我仿佛看到了自己辉煌的未来，我要插上翅膀，尽情翱翔！</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
